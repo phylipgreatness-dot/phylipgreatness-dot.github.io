@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Philip Adejumo — Social Media Manager, Digital Marketing professional and Content Creator. Portfolio, services and contact information.">
+<meta name="author" content="Philip Adejumo">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563eb">
+<title>Philip Adejumo | Social Media Manager & Digital Marketing</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#172033;background:#f7f9fc}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #e7eaf0;padding:15px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.25rem;font-weight:800;color:#111827}
+nav .links{display:flex;gap:22px}
+nav a{text-decoration:none;font-weight:700;color:#374151}
+nav a:hover{color:#2563eb}
+.menu{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
+
+.hero{min-height:82vh;display:flex;align-items:center;padding:75px 7%;background:linear-gradient(135deg,#eef4ff,#fff)}
+.hero-content{max-width:850px}
+.profile-photo{width:185px;height:185px;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 15px 45px rgba(17,24,39,.18);display:block;margin:0 0 25px}
+.badge{display:inline-block;background:#e8f0ff;color:#2563eb;padding:7px 14px;border-radius:999px;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;margin-bottom:18px;color:#111827}
+.hero h2{font-size:clamp(1.2rem,3vw,1.8rem);font-weight:600;color:#4b5563;margin-bottom:20px}
+.hero p{font-size:1.08rem;max-width:720px;color:#5b6472}
+.buttons{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:700;transition:.2s ease}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:#2563eb;color:white}
+.secondary{border:1px solid #cbd5e1;color:#1f2937;background:white}
+.whatsapp{background:#168c45;color:#fff}
+
+section{padding:78px 7%}
+.container{max-width:1100px;margin:auto}
+.section-title{font-size:2rem;margin-bottom:12px;color:#111827}
+.section-intro{max-width:760px;color:#667085;margin-bottom:30px}
+.about p{max-width:900px;color:#596273;font-size:1.06rem}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:25px;box-shadow:0 5px 18px rgba(17,24,39,.05);transition:.2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(17,24,39,.09)}
+.card h3{margin-bottom:8px;color:#111827}
+.card p{color:#667085}
+.icon{font-size:1.7rem;margin-bottom:10px}
+
+.services{background:#fff}
+.work{background:#f7f9fc}
+.portfolio-card{min-height:180px}
+.tag{display:inline-block;margin-top:15px;background:#eef4ff;color:#2563eb;border-radius:999px;padding:5px 10px;font-size:.85rem;font-weight:700}
+
+.testimonials{background:#111827;color:#fff}
+.testimonials .section-title{color:#fff}
+.testimonials .section-intro{color:#cbd5e1}
+.quote{background:#1f2937;border:1px solid #374151}
+.quote p{color:#e5e7eb;font-style:italic}
+.quote strong{display:block;margin-top:14px;color:#fff}
+.placeholder{border:1px dashed #64748b;text-align:center}
+
+.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.socials a{padding:10px 14px;border:1px solid #cbd5e1;border-radius:10px;text-decoration:none;background:#fff;font-weight:700}
+.socials a:hover{border-color:#2563eb;color:#2563eb}
+
+.contact{background:#fff}
+.contact-box{background:#111827;color:white;border-radius:20px;padding:35px}
+.contact-box .section-title{color:white}
+.contact-box p{color:#cbd5e1;margin-bottom:12px}
+.contact-box a{color:white}
+.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+.floating-wa{position:fixed;right:20px;bottom:20px;z-index:90;background:#168c45;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.45rem;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+
+footer{text-align:center;padding:25px;background:#0b1220;color:#aeb8c8;font-size:.92rem}
+.small{font-size:.9rem;color:#98a2b3;margin-top:12px}
+
+@media(max-width:700px){
+  nav{padding:14px 5%}
+  nav .links{display:none}
+  .menu{display:block}
+  section{padding:58px 5%}
+  .hero{padding:65px 5%}
+  .profile-photo{width:160px;height:160px}
+}
+</style>
+</head>
+
+<body>
+<nav>
+  <div class="logo">Philip Adejumo</div>
+  <button class="menu" aria-label="Menu" onclick="toggleMenu()">☰</button>
+  <div class="links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <img class="profile-photo" src="philip-profile.png" alt="Philip Adejumo — professional profile photo">
+    <span class="badge">Professional Portfolio</span>
+    <h1>Philip Adejumo</h1>
+    <h2>Social Media Manager • Digital Marketing • Content Creator</h2>
+    <p>I help brands build a stronger digital presence through engaging content, social media management, audience growth and practical digital marketing strategies.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#contact">Let's Work Together</a>
+      <a class="btn secondary" href="#work">View My Work</a>
+      <a class="btn whatsapp" href="https://wa.me/2348164224579" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-intro">A quick introduction to my professional focus.</p>
+    <p>I'm Philip Adejumo, a Social Media Manager and Digital Marketing professional passionate about creating engaging content, growing online communities and helping brands communicate effectively online. I enjoy continuous learning, creative work and finding practical ways to improve social media performance.</p>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">My Services</h2>
+    <p class="section-intro">Professional support for brands, creators and businesses that want to build a stronger online presence.</p>
+    <div class="grid">
+      <div class="card"><div class="icon">📱</div><h3>Social Media Management</h3><p>Planning, publishing and managing consistent content across social platforms.</p></div>
+      <div class="card"><div class="icon">🎬</div><h3>Content Creation</h3><p>Captions, video concepts, graphics and engaging social content designed around your audience.</p></div>
+      <div class="card"><div class="icon">📈</div><h3>Audience Growth</h3><p>Using content strategy and performance insights to support sustainable audience growth.</p></div>
+      <div class="card"><div class="icon">💻</div><h3>Digital Marketing</h3><p>Practical digital marketing and online visibility strategies that support brand goals.</p></div>
+      <div class="card"><div class="icon">✍️</div><h3>Content Strategy</h3><p>Developing consistent content ideas, campaigns and posting plans around clear objectives.</p></div>
+      <div class="card"><div class="icon">📊</div><h3>Analytics & Reporting</h3><p>Tracking content performance, engagement and growth to identify opportunities for improvement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="work">
+  <div class="container">
+    <h2 class="section-title">Portfolio & Selected Work</h2>
+    <p class="section-intro">A selection of the type of social media and digital work I have been involved in.</p>
+    <div class="grid">
+      <div class="card portfolio-card"><h3>TEPTV</h3><p>Social media content, captions, platform management and audience-focused content planning.</p><span class="tag">Social Media</span></div>
+      <div class="card portfolio-card"><h3>Techeverywhere</h3><p>Technology-focused social content, creative ideas and digital audience engagement.</p><span class="tag">Digital Content</span></div>
+      <div class="card portfolio-card"><h3>Social Media Projects</h3><p>Content development, reporting, performance tracking and social growth experiments.</p><span class="tag">Growth & Analytics</span></div>
+      <div class="card portfolio-card"><h3>Content Campaigns</h3><p>Content planning and creative concepts designed to improve consistency, reach and audience interaction.</p><span class="tag">Content Strategy</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Testimonials</h2>
+    <p class="section-intro">Real client and team feedback can be displayed here as you collect permission to publish it.</p>
+    <div class="grid">
+      <div class="card quote placeholder"><p>“Your testimonial can go here.”</p><strong>Client / Director Name</strong></div>
+      <div class="card quote placeholder"><p>“Your testimonial can go here.”</p><strong>Client / Team Member</strong></div>
+      <div class="card quote placeholder"><p>“Your testimonial can go here.”</p><strong>Client / Collaborator</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="container">
+    <h2 class="section-title">My CV</h2>
+    <p class="section-intro">My professional CV can be shared with employers and clients. Until a final CV file is added, you can request it directly.</p>
+    <a class="btn primary" href="mailto:phylipgreatness@gmail.com?subject=CV%20Request">📄 Request My CV</a>
+    <p class="small">A downloadable CV file can be added to this section whenever you are ready.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2 class="section-title">Let's Work Together</h2>
+      <p>I'm open to professional opportunities, collaborations and digital projects.</p>
+      <p><strong>Phone:</strong> <a href="tel:+2348164224579">08164224579</a> / <a href="tel:+2349018959354">09018959354</a></p>
+      <p><strong>Email:</strong> <a href="mailto:phylipgreatness@gmail.com">phylipgreatness@gmail.com</a></p>
+
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:phylipgreatness@gmail.com">📧 Email Me</a>
+        <a class="btn whatsapp" href="https://wa.me/2348164224579" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn secondary" href="tel:+2348164224579">📞 Call Me</a>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/philip__adejumo?igsi=MXZwaDVwODJ5NHN3Yw==" target="_blank" rel="noopener" title="Visit my Instagram profile">Instagram</a>
+        <a href="#" title="Replace with your TikTok profile">TikTok</a>
+        <a href="https://www.linkedin.com/in/adejumo-philip-b7510b41a" target="_blank" rel="noopener" title="Visit my LinkedIn profile">LinkedIn</a>
+        <a href="https://www.facebook.com/share/1Cmt33u7D6/" target="_blank" rel="noopener" title="Visit my Facebook profile">Facebook</a>
+      </div>
+      <p class="small">Connect with me on social media.</p>
+    </div>
+  </div>
+</section>
+
+<a class="floating-wa" href="https://wa.me/2348164224579" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<footer>
+  © 2026 Philip Adejumo. All rights reserved.
+</footer>
+
+<script>
+function toggleMenu(){
+  const links=document.getElementById('navLinks');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  if(links.style.display==='flex'){
+    links.style.flexDirection='column';
+    links.style.position='absolute';
+    links.style.top='60px';
+    links.style.right='5%';
+    links.style.background='#fff';
+    links.style.padding='15px';
+    links.style.border='1px solid #e5e7eb';
+    links.style.borderRadius='12px';
+    links.style.boxShadow='0 10px 25px rgba(0,0,0,.08)';
+  }
+}
+</script>
+</body>
+</html>
